@@ -1,0 +1,23 @@
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Generated outputs
+outputs/
+
+# Training / experiment artifacts
+checkpoints/
+weights/
+logs/
+lightning_logs/
+
+# Local cache
+.cache/
+
+# Editor / OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
