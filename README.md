@@ -1,9 +1,6 @@
-# <METHOD_NAME>
+# SLIM
 
-Official implementation of **"<PAPER_TITLE>"**.
-
-> **Paper:** <PAPER_URL>  
-> **Authors:** <AUTHOR_LIST>  
+Official implementation of **"SLIM: Semantic-based Low-bitrate Image Compression for Machines"**.
 
 This repository contains the training and inference code for our generative learned image compression method. The public release focuses on the main method, including Stage 1 training, Stage 2 training, dataset preparation, and image reconstruction.
 
