@@ -1,0 +1,17 @@
+
+torch==2.0.1
+xformers==0.0.22
+compressai==1.2.6
+einops==0.8.2
+kornia==0.8.2
+numpy==1.26.4
+omegaconf==2.3.0
+open-clip-torch==2.0.2
+opencv-python-headless==4.11.0.86
+Pillow==12.2.0
+pytorch-lightning==1.5.0
+torchvision==0.15.2
+tqdm==4.67.3
+pandas==2.3.3
+transformers==4.41.0
+requests==2.33.1
