@@ -281,7 +281,7 @@ The official BibTeX citation will be provided upon publication.
 
 This project builds upon several open-source projects, including Latent Diffusion, Stable Diffusion, ELIC, LPIPS, CompressAI, PyTorch, and related libraries.
 
-Please see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for third-party acknowledgements and license information.
+We thank the authors and contributors of these projects. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for third-party acknowledgements and license information.
 
 
 
@@ -289,6 +289,4 @@ Please see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for third-party ac
 
 ## License
 
-License information for this repository is provided in the root `LICENSE` file. Third-party components remain subject to their respective licenses as described in `THIRD_PARTY_NOTICES.md`.
-
-Third-party components remain subject to their respective licenses. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for details.
+The original code and modifications in this repository are released under the Apache License 2.0. Third-party components remain subject to their respective licenses, as documented in THIRD_PARTY_NOTICES.md.
