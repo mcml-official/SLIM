@@ -4,13 +4,13 @@ Official implementation of **"SLIM: Semantic-based Low-bitrate Image Compression
 
 This repository contains the training and inference code for our generative learned image compression method. The public release focuses on the main method, including Stage 1 training, Stage 2 training, dataset preparation, and image reconstruction.
 
+
+
+
+
 ## Overview
 
 The model is trained in two stages.
-
-**Stage 1** trains the base compression and reconstruction model with rate, diffusion, and guidance objectives.
-
-**Stage 2** resumes from a Stage 1 Lightning checkpoint and introduces the ROI-aware objective used in the final model. The Stage 2 objective includes ROI reconstruction, perceptual, and ImageNet classification losses.
 
 Multiple rate configurations are provided under:
 
@@ -28,37 +28,8 @@ rate4
 rate10
 ```
 
-## Repository Structure
 
-```text
-.
-├── configs/
-│   ├── model/
-│   │   ├── stage1/
-│   │   └── stage2/
-│   ├── train_stage1.yaml
-│   └── train_stage2.yaml
-├── dataset/
-│   ├── dataset.py
-│   └── imagenet_class_index.json
-├── ldm/
-├── model/
-│   ├── layers/
-│   ├── losses/
-│   ├── compressor.py
-│   ├── ddim_zc.py
-│   ├── stage1_model.py
-│   └── stage2_model.py
-├── scripts/
-│   └── prepare_imagenet.py
-├── utils/
-├── third_party_licenses/
-├── inference.py
-├── train.py
-├── requirements.txt
-├── LICENSE
-└── THIRD_PARTY_NOTICES.md
-```
+
 
 ## Environment
 
@@ -67,8 +38,8 @@ The release was tested with Python 3.10 and CUDA-enabled PyTorch.
 A recommended setup is:
 
 ```bash
-conda create -n generative_lic python=3.10 -y
-conda activate generative_lic
+conda create -n slim python=3.10 -y
+conda activate slim
 
 pip install -r requirements.txt
 ```
@@ -76,6 +47,10 @@ pip install -r requirements.txt
 The tested dependency versions are listed in `requirements.txt`.
 
 A CUDA-capable GPU is required for training and inference.
+
+
+
+
 
 ## Stable Diffusion v2.1 Checkpoint
 
@@ -93,7 +68,9 @@ The checkpoint path is supplied explicitly using:
 --sd-ckpt /path/to/v2-1_512-ema-pruned.ckpt
 ```
 
-The repository does not rely on a hard-coded local checkpoint path.
+
+
+
 
 ## Dataset Preparation
 
@@ -152,6 +129,10 @@ Additional options are available with:
 python scripts/prepare_imagenet.py --help
 ```
 
+
+
+
+
 ## Stage 1 Training
 
 The following example trains the `rate1` configuration:
@@ -187,6 +168,10 @@ max_steps: 100001
 precision: 32
 ```
 
+
+
+
+
 ## Stage 2 Training
 
 Stage 2 resumes from a Stage 1 Lightning checkpoint.
@@ -220,6 +205,10 @@ precision: 32
 ```
 
 Because Stage 2 resumes from the Stage 1 Lightning checkpoint, the training step state is continued rather than restarted from zero.
+
+
+
+
 
 ## Inference
 
@@ -258,19 +247,9 @@ configs/model/stage2/rate10.yaml
 
 By default, `--ddim-steps` is set to `5`. The current sampler internally appends a terminal timestep.
 
-CUDA is required for inference.
 
-If non-strict checkpoint loading is required, add:
 
-```bash
---non-strict
-```
 
-All available options can be inspected with:
-
-```bash
-python inference.py --help
-```
 
 ## Rate Configurations
 
@@ -286,15 +265,8 @@ The bitrate-loss weights used by the provided configurations are:
 Other core optimization settings are shared across the rate configurations unless specified otherwise in the YAML files.
 
 
-## Notes
 
-The small LPIPS calibration weight file required by the Stage 2 perceptual loss is included at:
 
-```text
-model/losses/vgg.pth
-```
-
-Evaluation-specific experiment scripts are intentionally not included in this release. This repository provides the main training and reconstruction pipeline described in the paper.
 
 ## Citation
 
@@ -304,11 +276,19 @@ If you find this work useful, please cite:
 <FINAL_BIBTEX>
 ```
 
+
+
+
+
 ## Acknowledgements
 
 This project builds upon several open-source projects, including Latent Diffusion, Stable Diffusion, ELIC, LPIPS, CompressAI, PyTorch, and related libraries.
 
 Please see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for third-party acknowledgements and license information.
+
+
+
+
 
 ## License
 
