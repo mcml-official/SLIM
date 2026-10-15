@@ -289,4 +289,4 @@ We thank the authors and contributors of these projects. See [`THIRD_PARTY_NOTIC
 
 ## License
 
-The original code and modifications in this repository are released under the Apache License 2.0. Third-party components remain subject to their respective licenses, as documented in THIRD_PARTY_NOTICES.md.
+The original code and modifications in this repository are released under the Apache License 2.0. Third-party components remain subject to their respective licenses, as documented in [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
