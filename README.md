@@ -270,12 +270,9 @@ Other core optimization settings are shared across the rate configurations unles
 
 ## Citation
 
-If you find this work useful, please cite:
+This paper has been accepted to the Asian Conference on Computer Vision (ACCV 2026).
 
-```bibtex
-<FINAL_BIBTEX>
-```
-
+The official BibTeX citation will be provided upon publication.
 
 
 
